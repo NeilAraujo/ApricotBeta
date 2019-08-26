@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Appricot</string>
+    <string name="recommended">Recommendations for you</string>
+    <string name="hotdeals">Hot Deals</string>
+    <string name="Restraunts">Restraunts</string>
+
+    <string name="label_category">Category</string>
+    <string name="label_city">City</string>
+    <string name="label_price">Price</string>
+    <string name="label_sort_by">Sort By</string>
+    <string name="errorinsignin">Sign in error</string>
+    <string name="nonetwork">No Network</string>
+    <string name="unknownerror">Unknown error</string>
+
+    <string-array name="categories">
+        <item>All food</item>
+        <item>North Indian</item>
+        <item>South Indian</item>
+        <item>Beverages</item>
+        <item>Bakery</item>
+        <item>Arabian</item>
+        <item>Chinese</item>
+        <item>Street Food</item>
+        <item>Biriyani</item>
+        <item>Desert</item>
+        <item>Icecream</item>
+        <item>Fast Food</item>
+    </string-array>
+
+    <string-array name="sort_by">
+        <item>Sort by Rating</item>
+        <item>Sort by Popularity</item>
+    </string-array>
+</resources>

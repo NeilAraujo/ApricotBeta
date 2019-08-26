@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+     >
+
+
+    <ImageView
+        android:id="@+id/list_restraunt_image"
+        android:layout_width="140dp"
+        android:layout_height="110dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/vellore_kitchen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/list_restraunt_cuisines"
+        android:layout_width="199dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/list_restraunt_name"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/list_restraunt_image"
+        android:padding="5dp"
+        android:text="Chinese,Indian"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/list_restraunt_image"
+        app:layout_constraintTop_toBottomOf="@+id/list_restaurant_item_rating" />
+
+
+
+    <TextView
+        android:id="@+id/list_restraunt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginStart="8dp"
+        android:layout_toRightOf="@id/list_restraunt_image"
+        android:text="Limra Garden Restraunt"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/list_restraunt_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/list_restaurant_item_rating"
+        style="@style/Widget.MaterialRatingBar.RatingBar.Indicator.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/list_restraunt_image"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/list_restraunt_image"
+        app:layout_constraintTop_toBottomOf="@+id/list_restraunt_name" />
+
+    <TextView
+        android:id="@+id/list_restraunt_ratings_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:text="(20)"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@+id/list_restaurant_item_rating"
+        app:layout_constraintTop_toBottomOf="@+id/list_restraunt_name" />
+
+</android.support.constraint.ConstraintLayout>

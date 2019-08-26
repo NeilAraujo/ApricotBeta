@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+       >
+
+        <RelativeLayout
+            android:id="@+id/restaurant_top_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp">
+
+            <ImageView
+                android:id="@+id/restaurant_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:alpha="1.0"
+                android:scaleType="centerCrop"
+                android:src="@drawable/vellore_kitchen" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/gradient_up" />
+
+            <!-- Back button -->
+            <ImageView
+                android:id="@+id/restaurant_button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:layout_alignLeft="@+id/restaurant_name"
+                android:layout_marginTop="16dp"
+                app:srcCompat="@drawable/ic_close_white_24px" />
+
+            <TextView
+                android:id="@+id/restaurant_name"
+                style="@style/AppTheme.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/restaurant_rating"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                tools:text="Some Restaurant" />
+
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/restaurant_rating"
+                style="@style/Widget.MaterialRatingBar.RatingBar.Indicator"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_above="@+id/restaurant_category"
+                android:layout_alignLeft="@+id/restaurant_name"
+                app:mrb_progressTint="@android:color/white"
+                app:mrb_secondaryProgressTint="@android:color/white" />
+
+            <TextView
+                android:id="@+id/restaurant_num_ratings"
+                style="@style/AppTheme.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/restaurant_rating"
+                android:layout_alignTop="@+id/restaurant_rating"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/restaurant_rating"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                tools:text="(10)" />
+
+            <TextView
+                android:id="@+id/restaurant_category"
+                style="@style/AppTheme.Subheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/restaurant_image"
+                android:layout_alignLeft="@+id/restaurant_name"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/white"
+                tools:text="Italian" />
+
+        </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_show_rating_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/restaurant_top_card"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="-28dp"
+            android:layout_marginRight="16dp"
+            app:srcCompat="@drawable/ic_add_white_24px" />
+
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="90dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Menu"
+        android:textSize="20sp"
+        android:textStyle="bold"
+         />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/restraunt_item_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="10dp"
+         />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="108dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Hot Deals"
+        android:textSize="20sp"
+        android:textStyle="bold"
+         />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/restraunt_item_hotdeals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="10dp"
+         />
+
+    <TextView
+    android:id="@+id/textView8"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:text="Photos"
+    android:textSize="20sp"
+    android:textStyle="bold"
+      />
+
+    <android.support.v7.widget.RecyclerView
+    android:id="@+id/restraunt_item_photos"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:padding="10dp"
+     />
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Details"
+        android:textSize="20sp"
+        android:textStyle="bold"
+         />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="CALL"
+        android:textStyle="bold"
+        tools:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/restraunt_item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        tools:text="09500108355"
+        />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="ADDRESS"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/restraunt_item_address"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        tools:text="No.9 B Katpadi to Chennai Salai Near VIT college Katpadi Taluk, 632007" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RATINGS"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"/>
+
+    <!-- Ratings -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_ratings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
